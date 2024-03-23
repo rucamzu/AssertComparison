@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.NUnit.Classic", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.NUnit.Constraint", "Tests.NUnit.Constraint\Tests.NUnit.Constraint.csproj", "{9EB8DFAC-5BEF-4B90-8604-2FD2438D9380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tested", "Tested\Tested.csproj", "{BEA7DC0F-FC8D-4045-BA28-BB81DDF640AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{9EB8DFAC-5BEF-4B90-8604-2FD2438D9380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB8DFAC-5BEF-4B90-8604-2FD2438D9380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB8DFAC-5BEF-4B90-8604-2FD2438D9380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA7DC0F-FC8D-4045-BA28-BB81DDF640AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA7DC0F-FC8D-4045-BA28-BB81DDF640AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA7DC0F-FC8D-4045-BA28-BB81DDF640AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA7DC0F-FC8D-4045-BA28-BB81DDF640AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

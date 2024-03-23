@@ -1,22 +1,18 @@
+using Tested;
+
 namespace Tests.NUnit.Constraint;
 
-public class BooleanTests
+public class BooleansTests
 {
     [Test]
-    public void BooleanIsTrue() => Assert.That(booleanFalse, Is.True);
+    public void BooleansIsTrue() => Assert.That(Booleans.False, Is.True);
 
     [Test]
-    public void BooleanIsFalse() => Assert.That(booleanTrue, Is.False);
+    public void BooleansIsFalse() => Assert.That(Booleans.True, Is.False);
 
     [Test]
-    public void MethodReturnsTrue() => Assert.That(ReturnBoolean(false), Is.True);
+    public void MethodReturnsTrue() => Assert.That(Booleans.Return(false), Is.True);
 
     [Test]
-    public void MethodReturnsFalse() => Assert.That(ReturnBoolean(true), Is.False);
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => Assert.That(Booleans.Return(true), Is.False);
 }

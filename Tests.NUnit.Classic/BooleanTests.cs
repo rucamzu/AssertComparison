@@ -1,24 +1,19 @@
 using NUnit.Framework.Legacy;
+using Tested;
 
 namespace Tests.NUnit.Classic;
 
-public class BooleanTests
+public class BooleansTests
 {
     [Test]
-    public void BooleanIsTrue() => ClassicAssert.IsTrue(booleanFalse);
+    public void BooleansIsTrue() => ClassicAssert.IsTrue(Booleans.False);
 
     [Test]
-    public void BooleanIsFalse() => ClassicAssert.IsFalse(booleanTrue);
+    public void BooleansIsFalse() => ClassicAssert.IsFalse(Booleans.True);
 
     [Test]
-    public void MethodReturnsTrue() => ClassicAssert.IsTrue(ReturnBoolean(false));
+    public void MethodReturnsTrue() => ClassicAssert.IsTrue(Booleans.Return(false));
 
     [Test]
-    public void MethodReturnsFalse() => ClassicAssert.IsFalse(ReturnBoolean(true));
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => ClassicAssert.IsFalse(Booleans.Return(true));
 }

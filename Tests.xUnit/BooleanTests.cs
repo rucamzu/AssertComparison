@@ -1,22 +1,18 @@
+using Tested;
+
 namespace Tests.xUnit;
 
-public class BooleanTests
+public class BooleansTests
 {
     [Fact]
-    public void BooleanIsTrue() => Assert.True(booleanFalse);
+    public void BooleansIsTrue() => Assert.True(Booleans.False);
 
     [Fact]
-    public void BooleanIsFalse() => Assert.False(booleanTrue);
+    public void BooleansIsFalse() => Assert.False(Booleans.True);
 
     [Fact]
-    public void MethodReturnsTrue() => Assert.True(ReturnBoolean(false));
+    public void MethodReturnsTrue() => Assert.True(Booleans.Return(false));
 
     [Fact]
-    public void MethodReturnsFalse() => Assert.False(ReturnBoolean(true));
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => Assert.False(Booleans.Return(true));
 }

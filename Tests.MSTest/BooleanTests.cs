@@ -1,23 +1,19 @@
+using Tested;
+
 namespace Tests.MSTest;
 
 [TestClass]
-public class BooleanTests
+public class BooleansTests
 {
     [TestMethod]
-    public void BooleanIsTrue() => Assert.IsTrue(booleanFalse);
+    public void BooleansIsTrue() => Assert.IsTrue(Booleans.False);
 
     [TestMethod]
-    public void BooleanIsFalse() => Assert.IsFalse(booleanTrue);
+    public void BooleansIsFalse() => Assert.IsFalse(Booleans.True);
 
     [TestMethod]
-    public void MethodReturnsTrue() => Assert.IsTrue(ReturnBoolean(false));
+    public void MethodReturnsTrue() => Assert.IsTrue(Booleans.Return(false));
 
     [TestMethod]
-    public void MethodReturnsFalse() => Assert.IsFalse(ReturnBoolean(true));
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => Assert.IsFalse(Booleans.Return(true));
 }

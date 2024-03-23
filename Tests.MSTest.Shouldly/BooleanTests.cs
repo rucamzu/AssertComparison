@@ -1,25 +1,20 @@
 using Shouldly;
+using Tested;
 
 namespace Tests.MSTest.Shouldly;
 
 [TestClass]
-public class BooleanTests
+public class BooleansTests
 {
     [TestMethod]
-    public void BooleanIsTrue() => booleanFalse.ShouldBeTrue();
+    public void BooleansIsTrue() => Booleans.False.ShouldBeTrue();
 
     [TestMethod]
-    public void BooleanIsFalse() => booleanTrue.ShouldBeFalse();
+    public void BooleansIsFalse() => Booleans.True.ShouldBeFalse();
 
     [TestMethod]
-    public void MethodReturnsTrue() => ReturnBoolean(false).ShouldBeTrue();
+    public void MethodReturnsTrue() => Booleans.Return(false).ShouldBeTrue();
 
     [TestMethod]
-    public void MethodReturnsFalse() => ReturnBoolean(true).ShouldBeFalse();
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => Booleans.Return(true).ShouldBeFalse();
 }

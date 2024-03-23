@@ -1,25 +1,20 @@
 using FluentAssertions;
+using Tested;
 
 namespace Tests.MSTest.FluentAssertions;
 
 [TestClass]
-public class BooleanTests
+public class BooleansTests
 {
     [TestMethod]
-    public void BooleanIsTrue() => booleanFalse.Should().BeTrue();
+    public void BooleansIsTrue() => Booleans.False.Should().BeTrue();
 
     [TestMethod]
-    public void BooleanIsFalse() => booleanTrue.Should().BeFalse();
+    public void BooleansIsFalse() => Booleans.True.Should().BeFalse();
 
     [TestMethod]
-    public void MethodReturnsTrue() => ReturnBoolean(false).Should().BeTrue();
+    public void MethodReturnsTrue() => Booleans.Return(false).Should().BeTrue();
 
     [TestMethod]
-    public void MethodReturnsFalse() => ReturnBoolean(true).Should().BeFalse();
-
-    private static readonly bool booleanTrue = true;
-
-    private static readonly bool booleanFalse = false;
-
-    private static bool ReturnBoolean(bool value) => value;
+    public void MethodReturnsFalse() => Booleans.Return(true).Should().BeFalse();
 }
